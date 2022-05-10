@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+html*{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family:'Lato', sans-serif;
+  background-color: #F8E7D9; /* nude */
+}
+.LandingView{
+  position: relative;
+}
+.CoverLanding{
+  position: relative;
+  width: 100%;
+}
+.Cover_Background{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.Cover_Background_Img{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+img{
+  max-width: 100%;
+}
+.Cover_Content{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+/* .Marca_Content{
+height: 100%;
+width: 100%;
+}
+.Logo_Contenedor{
+margin-left: 30px;
+margin-top: 30px;
+}
+.Cover_Logo{
+width: 2.5%;
+height: auto;
+}*/
+.container{
+  /* background-color: red; */
+  max-width: 100%;
+  padding: 0 100px;
+}
+.relative{
+  position: relative;
+}
+.h-full{
+  height: 100%;
+}
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.display_grid{
+  display: grid;
+}
+.Grid_Temp_Col{
+  grid-template-columns: repeat(12, auto);
+  grid-column-gap: 40px;
+}
+.Cover_Text{
+  background-color: green;
+  grid-column-start: 1;
+  grid-column-end: span 6;
+  margin-top: 150px;
+}
+h1{
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+p{
+  font-size: 1rem;
+}
