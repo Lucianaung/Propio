@@ -1,88 +1,292 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-html*{
-  scroll-behavior: smooth;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+html* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
+html{
+  scroll-behavior: smooth;
+}
+body {
   margin: 0;
   padding: 0;
-  font-family:'Lato', sans-serif;
-  background-color: #F8E7D9; /* nude */
+  font-family: "Lato", sans-serif;
+  background-color: #F9E9DC; /* nude */
 }
-.LandingView{
+.LandingView {
   position: relative;
 }
-.CoverLanding{
+.CoverLanding {
   position: relative;
   width: 100%;
 }
-.Cover_Background{
+.Cover_Background {
   height: 100%;
   position: relative;
   width: 100%;
 }
-.Cover_Background_Img{
+.Cover_Background_Img {
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
-img{
+img {
   max-width: 100%;
 }
-.Cover_Content{
+.Cover_Content {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
 }
-/* .Marca_Content{
-height: 100%;
+.cover_Top{
+  top: 0px;
+}
+.Cover_Marca{
 width: 100%;
 }
-.Logo_Contenedor{
-margin-left: 30px;
-margin-top: 30px;
-}
-.Cover_Logo{
+.Cover_Marca_Img{
+padding-left: 30px;
+padding-top: 30px;
 width: 2.5%;
 height: auto;
-}*/
-.container{
-  /* background-color: red; */
+}
+.container {
   max-width: 100%;
   padding: 0 100px;
 }
-.relative{
+.relative {
   position: relative;
 }
-.h-full{
+.h-full {
   height: 100%;
 }
-.flex{
+.flex {
   display: flex;
 }
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
-.display_grid{
+.display_grid {
   display: grid;
 }
-.Grid_Temp_Col{
-  grid-template-columns: repeat(12, auto);
+.Grid_Temp_Col {
   grid-column-gap: 40px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  /*grid-template-columns: repeat(12, auto);*/
 }
-.Cover_Text{
-  background-color: green;
+.cover_titulo_Top{
+  margin-top: 60px;
+}
+.Cover_Titulo {
+  /*background-color: green;*/
+  grid-column-start: 1;
+  grid-column-end: span 7;
+  /*margin-top: 150px;*/
+}
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.Cover_Descripcion {
   grid-column-start: 1;
   grid-column-end: span 6;
-  margin-top: 150px;
+  margin-top: 40px;
 }
-h1{
-  font-size: 3rem;
-  text-transform: uppercase;
+p {
+  margin: 0;
+  font-size: 1.2rem;
 }
-p{
+.Cover_CTA {
+  grid-column-start: 3;
+  grid-column-end: span 2;
+  margin-top: 80px;
+}
+.Boton_CTA{
+  background-color: #D21510; /* rojo */
+  margin: 0;
+  position: absolute;
+  border: none;
+  border-radius: 60px;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 1.2rem;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.SomosLanding {
+  top: -50px;
+  position: relative;
+  width: 100%;
+}
+/* .Col_Animate.Animate_Up{
+animation-name: animate-up;
+}
+.Col_Animate{
+height: 100%;
+animation-duration: 30s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+} */
+/* .Item_Animate{
+cursor: pointer;
+transition-timing-function: cubic-bezier(.66,0,.33,0);
+transition: all .3s;
+} */
+.Car1{
+  margin: 0;
+  gap: 40px;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  /* animation-name: animate-up; */
+}
+.Car2{
+  margin: 0;
+  gap: 40px;
+  grid-column-start: 4;
+  grid-column-end: span 3;
+  /* animation-name: animate-up; */
+}
+.Item{
+  width: 100%;
+  height: 250px;
+}
+.Somos_Content {
+  width: 100%;
+  position: absolute;
+}
+.somos_top{
+  top: 400px;
+}
+.Somos_Titulo {
+  grid-column-start: 8;
+  grid-column-end: span 5;
+}
+h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+.Somos_Descripcion {
+  grid-column-start: 8;
+  grid-column-end: span 4;
+}
+.Parrafos_Generales_Top {
+  margin-top: 20px;
   font-size: 1rem;
+}
+
+.Mockup_Top{
+  top: 100px;
+}
+.MockupLanding{
+  position: relative;
+  width: 100%;
+}
+.Mockup_Background{
+  grid-column-start: 2;
+  grid-column-end: span 12;
+}
+.Mockup_Background_Img{
+  object-fit: cover;
+  width: 100%;
+}
+.show{
+  display: flex;
+}
+.hidden{
+  display: none !important;
+}
+
+.FormularioLanding{
+  position: relative;
+  width: 100%;
+}
+.Formulario_Content{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.Formulario_Titulo{
+  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: span 8;
+}
+.Formulario_Descripcion{
+  grid-column-start: 1;
+  grid-column-end: span 10;
+}
+.Formulario_Form{
+  position: relative;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: span 12;
+}
+.Formulario_Top{
+  top: 20px;
+}
+.Formulario_Cover_Background{
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+.Square_Form_Content{
+  width: 100%;
+  padding: 20px;
+  grid-column-start: 8;
+  grid-column-end: span 4;
+}
+.Back_White{
+  background-color: white;
+}
+.Shadow{
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.Form_Titulo_Square{
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+h3{
+  margin: 0;
+  font-size: 1.7rem;
+}
+.Form_formulario{
+  margin: 0;
+}
+#inputs{
+  font-size: 1rem;
+  margin: 5px 0 5px 0;
+  padding: 0 0 0 10px;
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.CTA_Form{
+  margin: 20px 0 0 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+.Volver_Square{
+  display: flex;
+  flex-flow: row;
+}
+.Img_Volver_Tam{
+  width: 10px;
+  height: 13px;
+}
+#Margin_H6{
+  margin: 0 0 0 3px;
+}
+.Feedback_Square{
+  margin-top: 40px;
+}
+h4{
+  margin: 20px 0 50px 0;
+}
+h5{
+  margin: 0;
 }

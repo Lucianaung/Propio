@@ -1,58 +1,172 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>PROBÁ LA MEJOR PASTA DOMINGUERA LIBRE DE GLUTEN</title> <!--TITULO DE LA LANDING-->
-  <link rel="icon" type="image/png" href="img/favicon.png"> <!--LOGO DE LA MARCA-->
-  <link rel="stylesheet" href="css/index.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>PROBÁ LA MEJOR PASTA DOMINGUERA LIBRE DE GLUTEN</title>
+  <!--TITULO DE LA LANDING-->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <!--LOGO DE LA MARCA-->
+  <link rel="stylesheet" href="css/index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/ba40d1a3f4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="LandingView">
     <div class="LandingContainer">
+
       <section class="CoverLanding">
-          <div class="Cover_Background">
-            <img class="Cover_Background_Img" src="img/portada_d.png" alt="Pasta servida"> <!--IMAGEN FONDO PORTADA-->
+        <div class="Cover_Background">
+          <img class="Cover_Background_Img" src="img/portada_d.png" alt="Pasta servida"/><!--IMAGEN FONDO PORTADA-->
+        </div>
+
+        <div class="Cover_Content cover_Top">
+          <div class="Cover_Marca">
+            <img class="Cover_Marca_Img" src="img/logoB.png" alt="">
           </div>
-
-          <div class="Cover_Content">
-            <!-- <div class="Marca_Content">
-                <div class="Logo_Contenedor">
-                  <img class="Cover_Logo relative" src="img/logoB.png" alt="Marca, letra B de Bari">
-                </div>
-            </div> -->
-            <div class="container relative h-full flex flex-col "> <!--quitado: justify-center-->
-              <div class="display_grid Grid_Temp_Col">
-                <div class="Cover_Text">
-                  <h1>Probá la mejor pasta dominguera libre de gluten</h1>
-                  <p>Obtén nuestra Ruta Gastronómica sin T.A.C.C. Un mapa donde podrás localizar todos nuestros comercios y restaurantes favoritos, libres de gluten, con los que trabajamos dentro del pais.</p>
-
-                </div>
+          <div class="container relative h-full flex flex-col">
+            <div class="display_grid Grid_Temp_Col">
+              <div class="Cover_Titulo cover_titulo_Top">
+                <h1>
+                  Probá la mejor <br />pasta dominguera<br />
+                  libre de gluten
+                </h1>
               </div>
-
-            </div>
-          </div>
-      </section>
-      <section class="SomosLanding">
-        <div class="container flex h-full">
-          <div class="Row mov:grid-cols-6 desk:grid-cols-12">
-            <div class="Col desk:col-start-8 col-span-full desk:col-spand-12 flex-col">
-              <div class="Col col-span-full flex-col">
-                <div class="Titulo">
-                  <h3>100% sin TACC y sustentable</h3> <!-- AREGAR TITULO -->
-                </div>
-                <div class="Descripcion">
-                  <p>Estamos comprometidos a obtener nuestros ingredientes de manera responsable, porque sabemos que tenemos que hacer productos para que no solo tengan buen sabor, sino que hagan bien a nuestros clientes y nuestro planeta.</p>
-                </div>
+              <div class="Cover_Descripcion">
+                <p>
+                  Obtén nuestra Ruta Gastronómica sin T.A.C.C. Un mapa donde
+                  podrás localizar todos nuestros comercios y restaurantes
+                  favoritos, libres de gluten, con los que trabajamos dentro
+                  del pais.
+                </p>
               </div>
-
+              <div class="Cover_CTA">
+                  <a href= "#Form_Container"><button class="Boton_CTA" type="button">Conseguirlo</button> </a>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
+      <section class="SomosLanding">
+        <div class="container relative h-full flex flex-col">
+          <div class="display_grid Grid_Temp_Col">
+            <div class="Car1 display_grid Col_Animate Animate_Up"> <!--AGREGAR UN DIV POR CADA IMAGEN -->
+              <div class="Item"> <!--Img1-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img1.jpg" alt="img1">
+              </div>
+              <div class="Item"> <!--Img2-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img2.jpg" alt="img1">
+              </div>
+              <div class="Item"> <!--Img3-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img3.jpg" alt="img1">
+              </div>
+            </div>
+            <div class="Car2 display_grid Col_Animate Animate_Up">
+              <div class="Item"> <!--Img1-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img4.jpg" alt="img1">
+              </div>
+              <div class="Item"> <!--Img2-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img5.jpg" alt="img1">
+              </div>
+              <div class="Item"> <!--Img3-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img6.jpg" alt="img1">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="Somos_Content somos_top">
+          <div class="container relative h-full flex flex-col">
+            <div class="display_grid Grid_Temp_Col">
+              <div class="Somos_Titulo">
+                <h2>100% sin TACC y sustentable</h2>
+              </div>
+              <div class="Somos_Descripcion">
+                <p class="Parrafos_Generales_Top">
+                  Estamos comprometidos a obtener nuestros ingredientes de
+                  manera responsable porque sabemos que tenemos que hacer
+                  productos que no solo tengan buen sabor sino que hagan bien a nuestros clientes y nuestro planeta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="MockupLanding Mockup_Top"> <!--Etiqueta ocultar: hidden-->
+        <div class="container relative h-full flex flex-col">
+          <div class="display_grid Grid_Temp_Col">
+            <div class="Mockup_Background">
+              <img class="Mockup_Background_Img" src="img/mockup_d.png" alt="Mockup del producto"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="FormularioLanding Formulario_Top" id="Form_Container">
+        <div class="Cover_Background">
+          <img class="Cover_Background_Img" src="img/fondoF_d.png" alt="">
+        </div>
+
+        <div class="Formulario_Content">
+          <div class="container relative h-full flex flex-col">
+            <div class="display_grid Grid_Temp_Col">
+              <div class="Formulario_Titulo">
+                <h2>Nuestra ruta gastronómica solo para vos!</h2>
+              </div>
+              <div class="Formulario_Descripcion bottom">
+                <p class="Parrafos_Generales_Top">Queremos compartirte un mapa llenos de nuestros provedores, más cientos de nuestros restaurantes favoritos, para que tu próxima salida sea libre de estrés.</p>
+              </div>
+
+              <div class="Formulario_Form Formulario_Top">
+                <div class="Formulario_Cover_Background">
+                  <img class="Cover_Background_Img" src="img/mapa.png" alt="Fondo mapa">
+                </div>
+                <div class="display_grid Grid_Temp_Col">
+
+                  <!--__________________Formulario__________________-->
+                  <div class="Square_Form_Content relative Back_White Shadow">
+                    <div class="Form_Titulo_Square">
+                      <h3>Completá con tus datos</h3>
+                    </div>
+                    <div class="Form_formulario">
+                      <form action="index.html" method="post" onsubmit="Enviar_Formulario();">
+                        <input id="inputs" id="fname" type="text" name="fname" placeholder="¿Cómo querés que te llamemos?" value="" required> <!--Nombre-->
+                        <input id="inputs" id="email" type="text" name="email" placeholder="Mail" value="" required> <!--Mail-->
+                        <input id="inputs" type="text" name="country" placeholder="Pais" value="" required> <!--Pais-->
+                        <input id="inputs" type="text" name="city" placeholder="Ciudad" value="" required> <!--Ciudad-->
+                        <input id="Form_Boton" class="Boton_CTA CTA_Form" type="submit" name="" value="Obtener mapa"> <!--Boton de enviar-->
+                      </form>
+                    </div>
+                  </div>
+
+                  <!--__________________Feedback__________________-->
+                  <div class="Square_Form_Content Back_White Shadow Feedback relative h-full flex flex-col hidden" id="Feedback_Container">
+                    <div class="Volver_Square" onclick="cerrarFeedback()">
+                      <!-- <img class="Img_Volver_Tam" src="img/volver.png" alt="Flecha volver"> -->
+                      <i class="fa-light fa-angle-left"></i>
+                      <h6 id="Margin_H6">Volver</h6> <!--FUNCION VOLVER AL FORM-->
+                    </div>
+
+                    <div class="Feedback_Square">
+                      <h3>Esperamos que lo disfrutes <span id="nombre-usuario">@nombre</span>;)</h3>
+                      <h4>Ya podes acceder a la Ruta clickeando el mapa.</h4>
+                      <h5>Por cualquier inconveniente también enviamos el link a tu mail (<span id="mail-usuario">@email</span>)</h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
-    </body>
-    </html>
+  <script type="text/javascript" src="js/index.js">
+
+  </script>
+</body>
+</html>
