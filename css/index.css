@@ -17,8 +17,14 @@ body {
   position: relative;
 }
 .CoverLanding {
-  position: relative;
+  position: relative;z-index:3;
   width: 100%;
+}
+.Fondo_Desktop{
+  display: block;
+}
+.Fondo_Mobile{
+  display: none;
 }
 .Cover_Background {
   height: 100%;
@@ -42,13 +48,13 @@ img {
   top: 0px;
 }
 .Cover_Marca{
-width: 100%;
+  width: 100%;
 }
 .Cover_Marca_Img{
-padding-left: 30px;
-padding-top: 30px;
-width: 2.5%;
-height: auto;
+  padding-left: 30px;
+  padding-top: 30px;
+  width: 2%;
+  height: auto;
 }
 .container {
   max-width: 100%;
@@ -72,7 +78,6 @@ height: auto;
 .Grid_Temp_Col {
   grid-column-gap: 40px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  /*grid-template-columns: repeat(12, auto);*/
 }
 .cover_titulo_Top{
   margin-top: 60px;
@@ -109,7 +114,6 @@ p {
   position: absolute;
   border: none;
   border-radius: 60px;
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.19);
   font-size: 1.2rem;
   color: white;
   padding: 15px 40px;
@@ -119,37 +123,85 @@ p {
 
 .SomosLanding {
   top: -50px;
-  position: relative;
+  position: relative; z-index:1;
   width: 100%;
+  min-height: 670px;
 }
-/* .Col_Animate.Animate_Up{
-animation-name: animate-up;
+.Carruseles_Desktop{
+  display: block;
 }
-.Col_Animate{
-height: 100%;
-animation-duration: 30s;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-} */
-/* .Item_Animate{
-cursor: pointer;
-transition-timing-function: cubic-bezier(.66,0,.33,0);
-transition: all .3s;
-} */
+.absolute{
+  height: 100%;
+    position: absolute;
+    top: 0;
+}
 .Car1{
   margin: 0;
   gap: 40px;
   grid-column-start: 1;
   grid-column-end: span 3;
-  /* animation-name: animate-up; */
 }
 .Car2{
   margin: 0;
   gap: 40px;
   grid-column-start: 4;
   grid-column-end: span 3;
-  /* animation-name: animate-up; */
 }
+
+.Carrusel_columna_animada{
+  height: 100%;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animate-up{
+  animation-name: animate-up;
+}
+.Carrusel_item_animado{
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(.66,0,.33,0);
+  transition: all .3s;
+}
+@keyframes animate-up {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-50%);}
+}
+.animate-down{
+  animation-name: animate-down;
+}
+@keyframes animate-down{
+  0% {transform: translateY(-50%);}
+  100% {transform: translateY(0);}
+}
+
+/*____________________________CARRUSEL MOBIEL DESACTIVADO__________________________*/
+
+.Carrusel_Mobile{
+  display: none;
+  position: none;
+  margin: 0;
+  width: 100%;
+}
+.flex_direccion_mobile{
+  display: flex;
+  flex-direction: row;
+}
+.Carrusel_fila_animada{
+  width: 100%;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animate-left{
+  animation-name: animate-left;
+}
+.Item_mobile{
+  width: 200px;
+  height: 100%;
+}
+
+/*____________________________CARRUSEL MOBIEL DESACTIVADO__________________________*/
+
 .Item{
   width: 100%;
   height: 250px;
@@ -175,118 +227,711 @@ h2 {
 }
 .Parrafos_Generales_Top {
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .Mockup_Top{
   top: 100px;
 }
 .MockupLanding{
-  position: relative;
+  position: relative;z-index:2;
   width: 100%;
+  background-color: #F9E9DC;
 }
-.Mockup_Background{
+.Mockup_Background_Desktop{
+  display: block;
   grid-column-start: 2;
   grid-column-end: span 12;
+  margin-top: 100px;
+}
+.Mockup_Background_Mobile{
+  display: none;
 }
 .Mockup_Background_Img{
   object-fit: cover;
   width: 100%;
 }
-.show{
-  display: flex;
+.Mockup_Content{
+  grid-column-start: 3;
+  grid-column-end: span 11;
 }
-.hidden{
+
+.mostrar{
+  display: block;
+  /* display: flex;
+  flex-direction: column; */
+}
+.no-mostrar{
   display: none !important;
 }
 
-.FormularioLanding{
-  position: relative;
+
+.FormularioLanding {
+  position: relative;z-index:4;
   width: 100%;
 }
-.Formulario_Content{
-  width: 100%;
+.Vector_Desktop{
+  display: block;
+}
+.Vector_Mobile{
+  display: none;
+}
+.Formulario_Content {
   height: 100%;
+  width: 100%;
   position: absolute;
 }
-.Formulario_Titulo{
-  margin: 0;
+.Formulario_Titulo {
+  color: white;
+  grid-column-start: 1;
+  grid-column-end: span 7;
+}
+.Formulario_Descripcion {
+  color: white;
   grid-column-start: 1;
   grid-column-end: span 8;
 }
-.Formulario_Descripcion{
-  grid-column-start: 1;
-  grid-column-end: span 10;
+.Formulario_titulo_Top{
+  margin-top: 150px;
 }
-.Formulario_Form{
-  position: relative;
-  width: 100%;
+.Formulario_Mapa_Fondo{
   grid-column-start: 1;
   grid-column-end: span 12;
-}
-.Formulario_Top{
-  top: 20px;
-}
-.Formulario_Cover_Background{
-  height: 50%;
-  width: 100%;
   position: relative;
+  align-items: center;
+  height: 70%;
 }
-.Square_Form_Content{
+.mapa_Top{
+  margin-top: 50px;
+}
+.Mapa_Background{
+  /* position: relative;
+  width: 100%; */
+  height: 100%;
+}
+.Area_Formulario {
+  height: 100%;
   width: 100%;
-  padding: 20px;
-  grid-column-start: 8;
-  grid-column-end: span 4;
+  position: absolute;
 }
-.Back_White{
+.container_2 {
+  /* max-width: 100%; */
+  height: 100%;
+  padding: 20px;
+}
+.h-full_2 {
+  height: 90%;
+}
+.altura{
+  height: 100%;
+}
+.Cuadro_Formulario {
+  grid-column-start: 7;
+  grid-column-end: span 6;
   background-color: white;
+  padding: 40px;
 }
 .Shadow{
   box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.Form_Titulo_Square{
-  margin-top: 40px;
-  margin-bottom: 30px;
+.Texto_CompletaTusDatos{
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 h3{
   margin: 0;
   font-size: 1.7rem;
 }
-.Form_formulario{
-  margin: 0;
-}
-#inputs{
-  font-size: 1rem;
-  margin: 5px 0 5px 0;
-  padding: 0 0 0 10px;
-  position: relative;
+.Form{
   width: 100%;
-  height: 40px;
 }
-.CTA_Form{
-  margin: 20px 0 0 0;
-  padding: 0;
-  position: relative;
+.display_grid_Form{
+  display: grid;
+
+}
+.Grid_Temp_Col_Form{
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+form{
+  grid-column-start: 1;
+  grid-column-end: span 6;
+}
+input{
+  grid-column-start: 1;
+  grid-column-end: span 6;
+  width: auto;
+  height: 35px;
+  font-size: 1rem;
+  border-color: black;
+  border-width: 1.3px;
+  margin-top: 20px;
+}
+#imput3{
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+#imput4{
+  grid-column-start: 4;
+  grid-column-end: span 3;
+}
+.CTA_Formulario{
+  background-color: #D21510; /* rojo */
+  margin-top: 50px;
   width: 100%;
   height: 50px;
+  border: none;
+  border-radius: 60px;
+  font-size: 1.2rem;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
 }
-.Volver_Square{
+.Cuadro_Feedback{
+  grid-column-start: 7;
+  grid-column-end: span 6;
+  background-color: white;
+  padding: 40px;
+  /* height: 100%; */
+}
+.Volver{
+  align-items: center;
   display: flex;
   flex-flow: row;
 }
-.Img_Volver_Tam{
-  width: 10px;
-  height: 13px;
+.Volver:hover{
+  color: #D21510;
 }
-#Margin_H6{
-  margin: 0 0 0 3px;
-}
-.Feedback_Square{
-  margin-top: 40px;
-}
-h4{
-  margin: 20px 0 50px 0;
+span{
+  margin: 0;
 }
 h5{
-  margin: 0;
+  font-size: 1rem;
+  margin:0;
+  font-weight: lighter;
+}
+.Encabezado_Feedback{
+  margin-top: 40px;
+}
+.Texto_Feedback{
+  margin-top: 20px;
+}
+#mail-usuario{
+  color: #192D0A;
+}
+#link{
+  color: #D21510;
+}
+.Tarjeta_Popup{
+  width: 100%;
+  height: 100%;
+  position: fixed;z-index:6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup{
+  background-color: white;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  margin-top: 25%;
+  margin-left: 50%;
+}
+.Cerrar{
+  margin-left: 95%;
+}
+.material-symbols-outlined{
+  Weight: 900;
+  transition: all 200ms;
+}
+.material-symbols-outlined:hover{
+  color:  #D21510;
+}
+.content{
+  margin-top: 20px;
+}
+.FooterLanding{
+  position: relative;z-index:5;
+  width: 100%;
+}
+.footer{
+  padding: 100px 40px 40px 40px;
+}
+.Marca_Footer{
+  width: 20%;
+}
+.Redes_Footer{
+  height: 30px;
+  margin-left: 85%;
+}
+
+@media (max-width: 1437px){ /*Max de tablet*/
+
+}
+@media (max-width: 530px) { /*Mac de mobile*/
+
+  .LandingView {
+    position: relative;
+  }
+  .CoverLanding {
+    position: relative;z-index:3;
+    width: 100%;
+  }
+  .Fondo_Desktop{
+    display: none;
+  }
+  .Fondo_Mobile{
+    display: block;
+  }
+  .Cover_Background {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+  .Cover_Background_Img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+  .Cover_Content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .cover_Top{
+    top: 0px;
+  }
+  .Cover_Marca{
+    width: 100%;
+  }
+  .Cover_Marca_Img{
+    padding-left: 30px;
+    padding-top: 30px;
+    width: 2%;
+    height: auto;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 100px;
+  }
+  .relative {
+    position: relative;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .display_grid {
+    display: grid;
+  }
+  .Grid_Temp_Col {
+    grid-column-gap: 40px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .cover_titulo_Top{
+    margin-top: 60px;
+  }
+  .Cover_Titulo {
+    /*background-color: green;*/
+    grid-column-start: 1;
+    grid-column-end: span 7;
+    /*margin-top: 150px;*/
+  }
+  h1 {
+    margin: 0;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  .Cover_Descripcion {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    margin-top: 40px;
+  }
+  p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .Cover_CTA {
+    grid-column-start: 3;
+    grid-column-end: span 2;
+    margin-top: 80px;
+  }
+  .Boton_CTA{
+    background-color: #D21510; /* rojo */
+    margin: 0;
+    position: absolute;
+    border: none;
+    border-radius: 60px;
+    font-size: 1.2rem;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .SomosLanding {
+    top: -50px;
+    position: relative; z-index:1;
+    width: 100%;
+    min-height: 670px;
+  }
+  .Carruseles_Desktop{
+    display: block;
+  }
+  .absolute{
+    height: 100%;
+      position: absolute;
+      top: 0;
+  }
+  .Car1{
+    margin: 0;
+    gap: 40px;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+  .Car2{
+    margin: 0;
+    gap: 40px;
+    grid-column-start: 4;
+    grid-column-end: span 3;
+  }
+
+  .Carrusel_columna_animada{
+    height: 100%;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .animate-up{
+    animation-name: animate-up;
+  }
+  .Carrusel_item_animado{
+    cursor: pointer;
+    transition-timing-function: cubic-bezier(.66,0,.33,0);
+    transition: all .3s;
+  }
+  @keyframes animate-up {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-50%);}
+  }
+  .animate-down{
+    animation-name: animate-down;
+  }
+  @keyframes animate-down{
+    0% {transform: translateY(-50%);}
+    100% {transform: translateY(0);}
+  }
+
+  /*____________________________CARRUSEL MOBIEL DESACTIVADO__________________________*/
+
+  .Carrusel_Mobile{
+    display: none;
+    position: none;
+    margin: 0;
+    width: 100%;
+  }
+  .flex_direccion_mobile{
+    display: flex;
+    flex-direction: row;
+  }
+  .Carrusel_fila_animada{
+    width: 100%;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .animate-left{
+    animation-name: animate-left;
+  }
+  .Item_mobile{
+    width: 200px;
+    height: 100%;
+  }
+
+  /*____________________________CARRUSEL MOBIEL DESACTIVADO__________________________*/
+
+  .Item{
+    width: 100%;
+    height: 250px;
+  }
+  .Somos_Content {
+    width: 100%;
+    position: absolute;
+  }
+  .somos_top{
+    top: 400px;
+  }
+  .Somos_Titulo {
+    grid-column-start: 8;
+    grid-column-end: span 5;
+  }
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .Somos_Descripcion {
+    grid-column-start: 8;
+    grid-column-end: span 4;
+  }
+  .Parrafos_Generales_Top {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+
+  .Mockup_Top{
+    top: 100px;
+  }
+  .MockupLanding{
+    position: relative;z-index:2;
+    width: 100%;
+    background-color: #F9E9DC;
+  }
+  .Mockup_Background_Desktop{
+    display: block;
+    grid-column-start: 2;
+    grid-column-end: span 12;
+    margin-top: 100px;
+  }
+  .Mockup_Background_Mobile{
+    display: none;
+  }
+  .Mockup_Background_Img{
+    object-fit: cover;
+    width: 100%;
+  }
+  .Mockup_Content{
+    grid-column-start: 3;
+    grid-column-end: span 11;
+  }
+
+  .mostrar{
+    display: block;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .no-mostrar{
+    display: none !important;
+  }
+
+
+  .FormularioLanding {
+    position: relative;z-index:4;
+    width: 100%;
+  }
+  .Vector_Desktop{
+    display: block;
+  }
+  .Vector_Mobile{
+    display: none;
+  }
+  .Formulario_Content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .Formulario_Titulo {
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: span 7;
+  }
+  .Formulario_Descripcion {
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: span 8;
+  }
+  .Formulario_titulo_Top{
+    margin-top: 150px;
+  }
+  .Formulario_Mapa_Fondo{
+    grid-column-start: 1;
+    grid-column-end: span 12;
+    position: relative;
+    align-items: center;
+    height: 70%;
+  }
+  .mapa_Top{
+    margin-top: 50px;
+  }
+  .Mapa_Background{
+    /* position: relative;
+    width: 100%; */
+    height: 100%;
+  }
+  .Area_Formulario {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .container_2 {
+    /* max-width: 100%; */
+    height: 100%;
+    padding: 20px;
+  }
+  .h-full_2 {
+    height: 90%;
+  }
+  .altura{
+    height: 100%;
+  }
+  .Cuadro_Formulario {
+    grid-column-start: 7;
+    grid-column-end: span 6;
+    background-color: white;
+    padding: 40px;
+  }
+  .Shadow{
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .Texto_CompletaTusDatos{
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h3{
+    margin: 0;
+    font-size: 1.7rem;
+  }
+  .Form{
+    width: 100%;
+  }
+  .display_grid_Form{
+    display: grid;
+
+  }
+  .Grid_Temp_Col_Form{
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  form{
+    grid-column-start: 1;
+    grid-column-end: span 6;
+  }
+  input{
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    width: auto;
+    height: 35px;
+    font-size: 1rem;
+    border-color: black;
+    border-width: 1.3px;
+    margin-top: 20px;
+  }
+  #imput3{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+  #imput4{
+    grid-column-start: 4;
+    grid-column-end: span 3;
+  }
+  .CTA_Formulario{
+    background-color: #D21510; /* rojo */
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 60px;
+    font-size: 1.2rem;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+  }
+  .Cuadro_Feedback{
+    grid-column-start: 7;
+    grid-column-end: span 6;
+    background-color: white;
+    padding: 40px;
+    /* height: 100%; */
+  }
+  .Volver{
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+  }
+  .Volver:hover{
+    color: #D21510;
+  }
+  span{
+    margin: 0;
+  }
+  h5{
+    font-size: 1rem;
+    margin:0;
+    font-weight: lighter;
+  }
+  .Encabezado_Feedback{
+    margin-top: 40px;
+  }
+  .Texto_Feedback{
+    margin-top: 20px;
+  }
+  #mail-usuario{
+    color: #192D0A;
+  }
+  #link{
+    color: #D21510;
+  }
+  .Tarjeta_Popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;z-index:6;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .popup{
+    background-color: white;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    margin-top: 25%;
+    margin-left: 50%;
+  }
+  .Cerrar{
+    margin-left: 95%;
+  }
+  .material-symbols-outlined{
+    Weight: 900;
+    transition: all 200ms;
+  }
+  .material-symbols-outlined:hover{
+    color:  #D21510;
+  }
+  .content{
+    margin-top: 20px;
+  }
+  .FooterLanding{
+    position: relative;z-index:5;
+    width: 100%;
+  }
+  .footer{
+    padding: 100px 40px 40px 40px;
+  }
+  .Marca_Footer{
+    width: 20%;
+  }
+  .Redes_Footer{
+    height: 30px;
+    margin-left: 85%;
+  }
+
 }

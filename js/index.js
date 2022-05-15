@@ -1,21 +1,18 @@
-window.addEventListener("load", function () {
-  console.log("Funciona");
-});
 
-function Mostrar_Feedback() {
-  var parte_feedback = document.getElementById("Feedback_Container");
-  var parte_formulario = document.getElementById("Form_Container");
+function mostrarFeedback() {
+  var feedback = document.getElementById("feedback");
+  var formulario = document.getElementById("Formulario");
 
-  parte_formulario.classList.add("show");
-  parte_feedback.classList.remove("show");
-  parte_feedback.classList.add("hidden");
+  formulario.classList.add("no-mostrar");
+  feedback.classList.remove("no-mostrar");
+  feedback.classList.add("mostrar");
 }
 
-function Tomar_Datos() {
+function recolectarDatos() {
   var inputNombre = document.getElementById("fname");
-  var nombre = inputNombre.value;
-
   var inputMail = document.getElementById("mail");
+
+  var nombre = inputNombre.value;
   var mail = inputMail.value;
 
   var spanNombre = document.getElementById("nombre-usuario");
@@ -23,27 +20,57 @@ function Tomar_Datos() {
 
   spanNombre.innerText = nombre;
   spanEmail.innerText = mail;
-  console.log(nombre);
+
+  console.log("Nombre: " + nombre)
+  console.log("Correo: " + mail)
 }
 
-function Reset_Formulario() {
+function resetearFormulario() {
   var inputNombre = document.getElementById("fname");
   var inputMail = document.getElementById("mail");
+  var inputPais = document.getElementById("imput3");
+  var inputCiudad = document.getElementById("imput4");
   inputNombre.value = "";
   inputMail.value = "";
+  inputPais.value = "";
+  inputCiudad.value = "";
 }
 
-function Enviar_Formulario() {
-  Tomar_Datos();
-  Mostrar_Feedback();
-  Reset_Formulario();
+function enviarFormulario() {
+  recolectarDatos();
+  mostrarFeedback();
+  resetearFormulario();
 }
 
-function Salir_Feedback() {
-  var parte_formulario = document.getElementById("Form_Container");
-  var parte_feedback = document.getElementById("Form_Container");
+function cerrarFeedback() {
+  var formulario = document.getElementById("Formulario");
+  // var feedback = document.getElementById("contenedor-feedback");
 
-  parte_feedback.classList.remove("show");
-  parte_feedback.classList.add("hidden");
-  parte_formulario.classList.remove("hidden");
+  // feedback.classList.remove("mostrar");
+  feedback.classList.add("no-mostrar");
+  formulario.classList.remove("no-mostrar");
+}
+
+function abrirBloque1() {
+  var aBloque1 = document.getElementById("bloque1");
+
+  aBloque1.classList.remove("no-mostrar");
+}
+
+function cerrarBloque1() {
+  var cBloque1 = document.getElementById("bloque1");
+
+  cBloque1.classList.add("no-mostrar");
+}
+
+function abrirBloque6(bloquePopUp) {
+  var aBloque6 = document.getElementById("bloque6");
+
+  aBloque6.classList.remove("no-mostrar");
+}
+
+function cerrarBloque6() {
+  var cBloque6 = document.getElementById("bloque6");
+
+  cBloque6.classList.add("no-mostrar");
 }

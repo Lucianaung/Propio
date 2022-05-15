@@ -1,14 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <title>PROBÁ LA MEJOR PASTA DOMINGUERA LIBRE DE GLUTEN</title>
-  <!--TITULO DE LA LANDING-->
-  <link rel="icon" type="image/png" href="img/favicon.png" />
-  <!--LOGO DE LA MARCA-->
+  <title>PROBÁ LA MEJOR PASTA DOMINGUERA LIBRE DE GLUTEN</title> <!--TITULO DE LA LANDING-->
+  <link rel="icon" type="image/png" href="img/favicon.png" /> <!--LOGO DE LA MARCA-->
+  <!-- CONEXIONES -->
+  <script src="js/index.js" type="text/javascript"></script>
   <link rel="stylesheet" href="css/index.css" />
+  <!-- CONEXIONES -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/ba40d1a3f4.js" crossorigin="anonymous"></script>
+  <!-- ICONS GOOGLE -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 </head>
 
 <body>
@@ -17,7 +21,8 @@
 
       <section class="CoverLanding">
         <div class="Cover_Background">
-          <img class="Cover_Background_Img" src="img/portada_d.png" alt="Pasta servida"/><!--IMAGEN FONDO PORTADA-->
+          <img class="Fondo_Desktop Cover_Background_Img" src="img/portada_d.png" alt="Pasta servida"/><!--IMAGEN FONDO DESKTOP-->
+          <img class="Fondo_Mobile Cover_Background_Img" src="img/portada_d.png" alt="Pasta servida"/><!--IMAGEN FONDO MOBILE-->
         </div>
 
         <div class="Cover_Content cover_Top">
@@ -41,7 +46,8 @@
                 </p>
               </div>
               <div class="Cover_CTA">
-                  <a href= "#Form_Container"><button class="Boton_CTA" type="button">Conseguirlo</button> </a>
+                <button class="Boton_CTA" type="button" name="button" onclick="document.getElementById('SeccionFormulario').scrollIntoView();">Conseguirlo</button>
+                <!-- <a href= "#Form_Container"><button class="Boton_CTA" type="button">Conseguirlo</button> </a> -->
               </div>
             </div>
           </div>
@@ -49,31 +55,50 @@
       </section>
 
       <section class="SomosLanding">
-        <div class="container relative h-full flex flex-col">
-          <div class="display_grid Grid_Temp_Col">
-            <div class="Car1 display_grid Col_Animate Animate_Up"> <!--AGREGAR UN DIV POR CADA IMAGEN -->
-              <div class="Item"> <!--Img1-->
+        <div class="Carruseles_Desktop container h-full flex"> <!--CARRUSELES DESKTOP-->
+          <div class="display_grid Grid_Temp_Col absolute">
+
+            <div class="Car1 display_grid Carrusel_columna_animada animate-up"> <!--COLUMNA 1 IZQUIERDA-->
+              <div class="Item Carrusel_item_animado" onclick=" abrirBloque1()"> <!--Img1-->
                 <img class="Cover_Background_Img Item_Animate" src="img/img1.jpg" alt="img1">
               </div>
-              <div class="Item"> <!--Img2-->
-                <img class="Cover_Background_Img Item_Animate" src="img/img2.jpg" alt="img1">
+              <div class="Item Carrusel_item_animado"> <!--Img2-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img2.jpg" alt="img2" onclick="document.getElementById('bloque6').abrirPopUp()">
               </div>
-              <div class="Item"> <!--Img3-->
-                <img class="Cover_Background_Img Item_Animate" src="img/img3.jpg" alt="img1">
+              <div class="Item Carrusel_item_animado"> <!--Img3-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img3.jpg" alt="img3">
               </div>
-            </div>
-            <div class="Car2 display_grid Col_Animate Animate_Up">
-              <div class="Item"> <!--Img1-->
-                <img class="Cover_Background_Img Item_Animate" src="img/img4.jpg" alt="img1">
+              <div class="Item Carrusel_item_animado" onclick="abrirBloque1()"> <!--Img1-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img1.jpg" alt="img1">
               </div>
-              <div class="Item"> <!--Img2-->
-                <img class="Cover_Background_Img Item_Animate" src="img/img5.jpg" alt="img1">
+              <div class="Item Carrusel_item_animado"> <!--Img2-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img2.jpg" alt="img2" onclick="document.getElementById('bloque6').abrirPopUp()">
               </div>
-              <div class="Item"> <!--Img3-->
-                <img class="Cover_Background_Img Item_Animate" src="img/img6.jpg" alt="img1">
+              <div class="Item Carrusel_item_animado"> <!--Img3-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img3.jpg" alt="img3">
               </div>
             </div>
 
+            <div class="Car2 display_grid Carrusel_columna_animada animate-down"> <!--COLUMNA 2 DERECHA-->
+              <div class="Item Carrusel_item_animado"> <!--Img1-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img4.jpg" alt="img4">
+              </div>
+              <div class="Item Carrusel_item_animado"> <!--Img2-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img5.jpg" alt="img5">
+              </div>
+              <div class="Item Carrusel_item_animado" onclick=" abrirBloque6()"> <!--Img3-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img6.jpg" alt="img6">
+              </div>
+              <div class="Item Carrusel_item_animado"> <!--Img1-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img4.jpg" alt="img4">
+              </div>
+              <div class="Item Carrusel_item_animado"> <!--Img2-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img5.jpg" alt="img5">
+              </div>
+              <div class="Item Carrusel_item_animado" onclick=" abrirBloque6()"> <!--Img3-->
+                <img class="Cover_Background_Img Item_Animate" src="img/img6.jpg" alt="img6">
+              </div>
+            </div>
           </div>
         </div>
 
@@ -93,80 +118,160 @@
             </div>
           </div>
         </div>
+
+        <div class="Carrusel_Mobile"> <!--CARRUSELES MOBILE-->
+          <div class="flex_direccion_mobile Carrusel_fila_animada animate-left"> <!--no-mostrar-->
+            <div class="Item_mobile Carrusel_item_animado"> <!--Img1-->
+              <img class="Cover_Background_Img Item_Animate" src="img/img1.jpg" alt="img4">
+            </div>
+            <div class="Item_mobile Carrusel_item_animado"> <!--Img1-->
+              <img class="Cover_Background_Img Item_Animate" src="img/img2.jpg" alt="img4">
+            </div>
+            <div class="Item_mobile Carrusel_item_animado"> <!--Img1-->
+              <img class="Cover_Background_Img Item_Animate" src="img/img3.jpg" alt="img4">
+            </div>
+            <div class="Item_mobile Carrusel_item_animado"> <!--Img1-->
+              <img class="Cover_Background_Img Item_Animate" src="img/img4.jpg" alt="img4">
+            </div>
+            <div class="Item_mobile Carrusel_item_animado"> <!--Img1-->
+              <img class="Cover_Background_Img Item_Animate" src="img/img5.jpg" alt="img4">
+            </div>
+            <div class="Item_mobile Carrusel_item_animado"> <!--Img1-->
+              <img class="Cover_Background_Img Item_Animate" src="img/img6.jpg" alt="img4">
+            </div>
+          </div>
+        </div>
+
+
       </section>
 
-      <section class="MockupLanding Mockup_Top"> <!--Etiqueta ocultar: hidden-->
+      <section class="MockupLanding Mockup_Top"> <!--Etiqueta ocultar: no-mostrar-->
         <div class="container relative h-full flex flex-col">
           <div class="display_grid Grid_Temp_Col">
-            <div class="Mockup_Background">
+            <div class="Mockup_Background_Desktop"> <!--MOCKUP DESKTOP-->
               <img class="Mockup_Background_Img" src="img/mockup_d.png" alt="Mockup del producto"/>
+            </div>
+            <div class="Mockup_Background_Mobile"> <!--MOCKUP MOBILE-->
+              <img class="Mockup_Background_Img" src="img/mockup_m.png" alt="Mockup del producto"/>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="FormularioLanding Formulario_Top" id="Form_Container">
+
+      <section class="FormularioLanding" id="SeccionFormulario">
         <div class="Cover_Background">
-          <img class="Cover_Background_Img" src="img/fondoF_d.png" alt="">
+          <img class="Vector_Desktop Cover_Background_Img" src="img/fondoF_d.png" alt="Fondo de formulario verde"/> <!--FONDO DESKTOP-->
+          <img class="Vector_Mobile Cover_Background_Img" src="img/fondoF_d.png" alt="Fondo de formulario verde"/> <!--FONDO MOBILE-->
         </div>
 
-        <div class="Formulario_Content">
+        <div class="Formulario_Content cover_Top">
           <div class="container relative h-full flex flex-col">
             <div class="display_grid Grid_Temp_Col">
-              <div class="Formulario_Titulo">
+
+              <div class="Formulario_Titulo Formulario_titulo_Top">
                 <h2>Nuestra ruta gastronómica solo para vos!</h2>
               </div>
-              <div class="Formulario_Descripcion bottom">
+
+              <div class="Formulario_Descripcion">
                 <p class="Parrafos_Generales_Top">Queremos compartirte un mapa llenos de nuestros provedores, más cientos de nuestros restaurantes favoritos, para que tu próxima salida sea libre de estrés.</p>
               </div>
 
-              <div class="Formulario_Form Formulario_Top">
-                <div class="Formulario_Cover_Background">
-                  <img class="Cover_Background_Img" src="img/mapa.png" alt="Fondo mapa">
-                </div>
-                <div class="display_grid Grid_Temp_Col">
-
-                  <!--__________________Formulario__________________-->
-                  <div class="Square_Form_Content relative Back_White Shadow">
-                    <div class="Form_Titulo_Square">
-                      <h3>Completá con tus datos</h3>
-                    </div>
-                    <div class="Form_formulario">
-                      <form action="index.html" method="post" onsubmit="Enviar_Formulario();">
-                        <input id="inputs" id="fname" type="text" name="fname" placeholder="¿Cómo querés que te llamemos?" value="" required> <!--Nombre-->
-                        <input id="inputs" id="email" type="text" name="email" placeholder="Mail" value="" required> <!--Mail-->
-                        <input id="inputs" type="text" name="country" placeholder="Pais" value="" required> <!--Pais-->
-                        <input id="inputs" type="text" name="city" placeholder="Ciudad" value="" required> <!--Ciudad-->
-                        <input id="Form_Boton" class="Boton_CTA CTA_Form" type="submit" name="" value="Obtener mapa"> <!--Boton de enviar-->
-                      </form>
-                    </div>
-                  </div>
-
-                  <!--__________________Feedback__________________-->
-                  <div class="Square_Form_Content Back_White Shadow Feedback relative h-full flex flex-col hidden" id="Feedback_Container">
-                    <div class="Volver_Square" onclick="cerrarFeedback()">
-                      <!-- <img class="Img_Volver_Tam" src="img/volver.png" alt="Flecha volver"> -->
-                      <i class="fa-light fa-angle-left"></i>
-                      <h6 id="Margin_H6">Volver</h6> <!--FUNCION VOLVER AL FORM-->
-                    </div>
-
-                    <div class="Feedback_Square">
-                      <h3>Esperamos que lo disfrutes <span id="nombre-usuario">@nombre</span>;)</h3>
-                      <h4>Ya podes acceder a la Ruta clickeando el mapa.</h4>
-                      <h5>Por cualquier inconveniente también enviamos el link a tu mail (<span id="mail-usuario">@email</span>)</h5>
-                    </div>
-                  </div>
+              <!--______________________SECCION FORMULARIO________________-->
+              <div class="Formulario_Mapa_Fondo mapa_Top">
+                <div class="Mapa_Background">
+                  <img class="Cover_Background_Img" src="img/mapa.png" alt="Fondo de mapa"/>
                 </div>
 
+                <div class="Area_Formulario cover_Top">
+                  <div class="container_2 relative h-full_2 flex flex-col">
+                    <div class="display_grid Grid_Temp_Col altura">
+
+                      <div class="Cuadro_Formulario Shadow" id="Formulario"> <!--NO MOSTRAR CUANDO ESTA EL FEEDBACK-->
+                        <div class="Texto_CompletaTusDatos">
+                          <h3>Completá con tus datos</h3>
+                        </div>
+
+                        <div class="Form">
+                          <div class="display_grid_Form Grid_Temp_Col_Form">
+
+                            <form onsubmit="enviarFormulario(); return false">
+                              <div class="display_grid_Form Grid_Temp_Col_Form">
+                                <input id="fname" type="text" name="fname" size="50" placeholder="¿Cómo querés que te llamemos?" value="" required> <!--Nombre-->
+                                <input id="mail" type="email" name="mail" placeholder="Mail" value="" required> <!--Mail-->
+                                <input id="imput3" type="text" name="country" placeholder="Pais" value="" required> <!--Pais-->
+                                <input id="imput4" type="text" name="city" placeholder="Ciudad" value="" required> <!--Ciudad-->
+                              </div>
+                              <input id="Boton_Formulario" class="CTA_Formulario" type="submit" name="submit" value="Obtener mapa"> <!--Boton de enviar-->
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--______________________SECCION FEEDBACK________________-->
+                      <div class="Cuadro_Feedback Shadow no-mostrar" id="feedback">
+                        <div class="Volver" onclick="cerrarFeedback()">
+                          <span class="material-symbols-outlined">arrow_back_ios</span>
+                          <h5>Volver</h5>
+                        </div>
+
+                        <div class="Encabezado_Feedback">
+                          <h3>Esperamos que lo disfrutes <span id="nombre-usuario">@nombre</span>;)</h3>
+                        </div>
+                        <div class="Texto_Feedback">
+                          <p>Ya podes acceder a la Ruta clickeando sobre el mapa.</p>
+                          <h5>Por cualquier inconveniente también enviamos el <a id="link" href="https://www.google.com/maps/d/u/0/viewer?mid=110cGRBPIm1uVwaefRFiesqzyqO8&hl=en_US&ll=-32.74415135715994%2C-61.61279183518853&z=6">link</a> a <span id="mail-usuario">@email</span></h5>
+                        </div>
+
+                      </div>
+                      <!--______________________SECCION FEEDBACK________________-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--______________________SECCION FORMULARIO________________-->
+            </div>
+          </section>
+          <!--BLOQUES POPUP -->
+          <section class="Tarjeta_Popup no-mostrar" id="bloque1">
+            <div class="relative h-full">
+              <!-- <div class="display_grid Grid_Temp_Col"> -->
+              <div class="popup">
+                <div class="Cerrar" onclick="cerrarBloque1()">
+                  <span class="material-symbols-outlined">close</span>
+                </div>
+                <h2>Todo sustentable</h2>
+                <div class="content">
+                  <p>Sabemos lo importante que es cuidar de nuestro planeta hoy en día, por eso todo nuestro equipo material es ecológico. Incluso nuestrosrepartidores son neutros de Co2.</p>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </section>
+
+          <section class="Tarjeta_Popup no-mostrar" id="bloque6">
+            <div class="relative h-full">
+              <div class="popup">
+                <div class="Cerrar" onclick="cerrarBloque6()">
+                  <span class="material-symbols-outlined">close</span>
+                </div>
+                <h2>Ingredientes de confianza</h2>
+                <div class="content">
+                  <p>Toda nuestra materia prima es libre de gluten. Contamos con una amplia cantidad de harinas, de diferentes regiones del pais, y con un confiable sistema de control de calidad para que todos los productos que lleguen a tu casa sean seguros.</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <script type="text/javascript" src="js/index.js">
+          </section>
 
-  </script>
-</body>
-</html>
+          <section class="FooterLanding">
+            <div class="footer">
+              <img class="img Marca_Footer" src="img/logoBari.png" alt="marca Bari">
+              <h5>Politica de Privacidad - Politica de Cookies</h5>
+              <img class="img Redes_Footer" src="img/redes.png" alt="redes sociales">
+            </div>
+          </section>
+        </div>
+      </div>
+    </body>
+    </html>
